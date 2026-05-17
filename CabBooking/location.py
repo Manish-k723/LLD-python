@@ -9,5 +9,5 @@ class Location:
         return self.__lat
     def get_lng(self):
         return self.__lng
-    def calc_distance(self, other: Location):
-        return (other.get_lat() - self.get_lat()) + (other.get_lng() - self.get_lng())
+    def distance_to(self, other: Location):
+        return abs((other.get_lat() - self.get_lat()) + (other.get_lng() - self.get_lng()))

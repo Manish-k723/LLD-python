@@ -1,8 +1,9 @@
 from notification_strategy import NotificationStrategy
 
-class EmailNotificationStrategy(NotificationStrategy):
-    def notifyUser(self, message: str) -> None:
-        print(f"Email sent to user: {message}")
 
-    def notifyDriver(self, message: str) -> None:
-        print(f"Email sent to driver: {message}")
+class EmailNotificationStrategy(NotificationStrategy):
+    def notify_rider(self, message: str) -> None:
+        print(f"Email to rider: {message}")
+
+    def notify_driver(self, message: str) -> None:
+        print(f"Email to driver: {message}")

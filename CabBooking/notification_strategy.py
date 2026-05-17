@@ -1,10 +1,11 @@
 from abc import ABC, abstractmethod
 
+
 class NotificationStrategy(ABC):
     @abstractmethod
-    def notifyUser(self, message: str) -> None:
+    def notify_rider(self, message: str) -> None:
         ...
 
     @abstractmethod
-    def notifyDriver(self, message) -> None:
+    def notify_driver(self, message: str) -> None:
         ...

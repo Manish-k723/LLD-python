@@ -15,3 +15,5 @@ class User:
         return self.__location
     def get_phone(self):
         return self.__phone
+    def update_location(self, location: Location):
+        self.__location = location
