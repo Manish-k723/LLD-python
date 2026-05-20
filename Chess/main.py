@@ -1,14 +1,26 @@
+from player import Player
+from color_enum import ColorEnum
+from game import Game
+from board import Board
 
-from Chess.game import Game
-from Chess.player import Player
+manish = Player(1, "Manish_choomuuuuuuu", ColorEnum.WHITE)
+priyanka = Player(2, "Husn_Pari", ColorEnum.BLACK)
 
-player1 = Player(1, "Manish", True)
-player2 = Player(2, "Prenka", False)
+game = Game(manish, priyanka)
+game.startGame()
 
-game = Game(player1, player2)
-status, winner = game.start_game()
+print("Initial Board")
+game.get_board().display()
 
-if status:
-    print(f"Won: {winner}")
-else:
-    print("Game Drawn")
+
+Moves = [
+    
+]
+
+
+
+
+
+
+
+
