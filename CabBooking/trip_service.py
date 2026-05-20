@@ -8,7 +8,7 @@ from CabBooking.fare_calculator import FareCalculator
 from CabBooking.location import Location
 from CabBooking.notification_service import NotificationService
 from CabBooking.trip import Trip
-from CabBooking2.notification_strategy import NotificationStrategy
+from CabBooking.notification_strategy import NotificationStrategy
 
 
 class TripService:
