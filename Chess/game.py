@@ -1,35 +1,15 @@
-from Chess.Move import Move
-from Chess.board import Board
-from Chess.cell import Cell
-from Chess.game_status import GameStatus
-from Chess.player import Player
-from Chess.position import Position
-
-
+from player import Player
+from board import Board
 class Game:
-    def __init__(self, player1: Player, player2: Player) -> None:
-        self.__board = Board()
-        self.__player1 = player1
-        self.__player2 = player2
-        self.__status: GameStatus = GameStatus.INACTIVE
-        self.__is_white_turn = True
-        self.game_logs = [str]
-
-    def start_game(self):
-        self.__status = GameStatus.ACTIVE
-
-        # Cell(Position(x1, y1)), Cell(Position(x2, y2))
-
-        while self.__status == GameStatus.ACTIVE:
-            x1 = int(input())
-            y1 = int(input())
-            x2 = int(input())
-            y2 = int(input())
-            if self.__is_white_turn:
-                self.make_move()
-            else:
-                self.make_move()
-
-
-    def make_move(self):
-        ...
+    def __init__(self, white_player: Player, black_player: Player):
+        self.__p1 = white_player
+        self.__p2 = black_player
+        self.__board = Board(self)
+        self.__board.resetBoard()
+        self.__game_status = GameStatus.INACTIVE
+        
+        
+    def get_board(self):
+        return self.__board
+    def startGame(self):
+        pass

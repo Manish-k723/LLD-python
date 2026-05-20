@@ -5,7 +5,7 @@ from player import Player
 from position import Position
 
 
-white_player = Player(1, "Manish", Color.WHITE) # Safedi ki chamak
+white_player = Player(1, "Manish", Color.WHITE) # Safedi ki chamak ujjala (white Bhoot)
 black_player = Player(2, "Prenka", Color.BLACK) # Kallu
 
 game = Game(white_player, black_player)
