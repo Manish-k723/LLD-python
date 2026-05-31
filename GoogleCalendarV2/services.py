@@ -129,7 +129,7 @@ class RecurrenceService:
         count = rule.count or 1
         step_map = {
             RecurringFrequency.DAILY: timedelta(days=rule.interval),
-            RecurringFrequency.WEEKLY: timedelta(weeks=rule.interval),
+            RecurringFrequency.WEEKLY: timedelta(weeks=7 * rule.interval),
             RecurringFrequency.MONTHLY: timedelta(days=30 * rule.interval),
         }
         step = step_map[rule.frequency]
