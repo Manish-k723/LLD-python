@@ -1,3 +1,5 @@
+import time
+
 from CabBooking.cab import Cab
 from CabBooking.cab_booking_service import CabBookingService
 from CabBooking.cab_type import CabType
@@ -44,6 +46,7 @@ if not trip1:
 else:
     print(f"Trip booked: {trip1.get_trip_id()}, fare={trip1.get_estimated_fare():.2f}")
     cab_booking_service.start_trip(trip1.get_trip_id())
+    time.sleep(10)
     cab_booking_service.complete_trip(trip1.get_trip_id())
 
 if not trip2:
@@ -51,5 +54,6 @@ if not trip2:
 else:
     print(f"Trip booked: {trip2.get_trip_id()}, fare={trip2.get_estimated_fare():.2f}")
     cab_booking_service.start_trip(trip2.get_trip_id())
+    time.sleep(10)
     cab_booking_service.complete_trip(trip2.get_trip_id())
 

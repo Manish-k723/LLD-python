@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from account_factory import AccountFactory
 from account_type import AccountType
 from account import *
